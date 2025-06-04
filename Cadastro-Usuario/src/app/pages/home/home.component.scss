@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #6366f1;
+  background-color: white;
   padding: 1rem 2rem;
-  color: white;
+  color: #6366f1;
   border-radius: 0.7rem;
   margin-bottom: 2rem;
 
@@ -46,20 +48,12 @@
   }
 }
 
-.usuario-info {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  p {
-    margin: 0.3rem 0;
-  }
-}
 
 .tabela-usuarios {
   width: 80%;
-  margin: 20px auto; /* centraliza horizontalmente */
+  margin: 20px auto;
   border-collapse: collapse;
+  font-family: sans-serif;
   text-align: left;
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -86,17 +80,12 @@
   gap: 1rem;
 
   button {
-    background-color: #6366f1;
+    background-color: #6366f1 ;
     color: white;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
-
-    &:disabled {
-      background-color: #c7d2fe;
-      cursor: not-allowed;
-    }
   }
 }
 
@@ -133,6 +122,36 @@
 
     button:last-child {
       background-color: #f3f4f6;
+    }
+  }
+}
+
+
+.usuario-info {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  transition: all 0.3s ease;
+
+  .boas-vindas {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+
+  .detalhe {
+    font-size: 1rem;
+    margin-bottom: 6px;
+
+    span {
+      font-weight: 500;
+      color: #555;
     }
   }
 }
