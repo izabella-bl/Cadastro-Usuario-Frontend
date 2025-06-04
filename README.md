@@ -44,22 +44,22 @@ Estrutura do projeto
 
 - Login: Tela para o usuário acessar o sistema.
   <div align="left">
-     <img src="https://github.com/user-attachments/assets/4d05436e-1826-4929-a530-e9ac3b1afd8f" width="700px" />
+     <img src="https://github.com/user-attachments/assets/4423f650-2ebb-49a8-86eb-7927bc26d0ea" width="700px" />
   </div>
 
 - Registro: Tela para o usuário criar uma nova conta.
   <div align="left">
-     <img src="https://github.com/user-attachments/assets/4d05436e-1826-4929-a530-e9ac3b1afd8f" width="700px" />
+     <img src="https://github.com/user-attachments/assets/e5b5676d-c1c5-4363-a072-b0d2561294ff" width="700px" />
   </div>
   
 - Home: Tela principal onde o usuário visualiza seus dados e a lista de usuários.
   <div align="left">
-     <img src="https://github.com/user-attachments/assets/4d05436e-1826-4929-a530-e9ac3b1afd8f" width="700px" />
+     <img src="https://github.com/user-attachments/assets/f0a3f5db-ead7-412a-b24f-a45184879a07" width="700px" />
   </div>
   
 - Atualizar Dados: Tela para o usuário atualizar suas informações pessoais.
   <div align="left">
-     <img src="https://github.com/user-attachments/assets/4d05436e-1826-4929-a530-e9ac3b1afd8f" width="700px" />
+     <img src="https://github.com/user-attachments/assets/2934b204-710a-4da3-89de-9800ee4a9f36" width="700px" />
   </div>
 
 ---
