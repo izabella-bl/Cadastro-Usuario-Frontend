@@ -1,4 +1,4 @@
-Cadastro-Usuario
+Cadastro Usuario
 
 Descrição
 
@@ -28,7 +28,7 @@ Antes de iniciar, certifique-se de ter instalado:
 Como instalar e rodar o projeto
 
 1. Clone este repositório:
-   git clone [text](https://github.com/izabella-bl/Cadastro-Usuario-Frontend.git)
+   git clone https://github.com/izabella-bl/Cadastro-Usuario-Frontend.git
 2. Entre na pasta do projeto:
    cd cadastro-usuario
 3. Instale as dependências:
