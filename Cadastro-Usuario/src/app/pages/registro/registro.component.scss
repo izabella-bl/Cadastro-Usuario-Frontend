@@ -1,0 +1,118 @@
+form {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+
+  input {
+    width: 90%;
+    padding: 0.7rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+
+    &:focus {
+      border-color: #6366f1;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+
+    &.ng-invalid.ng-touched {
+      border-color: #ef4444;
+      background-color: #fff5f5;
+    }
+  }
+
+  small {
+    color: #ef4444;
+    font-size: 0.85rem;
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+    display: block;
+  }
+
+  button {
+    padding: 0.8rem;
+    background: #6366f1;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #4f46e5;
+    }
+
+    &:disabled {
+      background: #c7d2fe;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .input-com-icone {
+    width: 100%;
+    padding-right: 2.5rem; // espaço pro ícone
+  }
+
+  .icone-botao {
+    position: absolute;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    i {
+      color: #000; // Olhinho preto
+      font-size: 1rem;
+    }
+  }
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.form-footer {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+
+  a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

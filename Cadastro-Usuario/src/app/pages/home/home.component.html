@@ -1,0 +1,51 @@
+
+<nav class="navbar">
+  <div class="navbar-left">Cadastro de Usuário</div>
+  <div class="navbar-right">
+    <button class="nav-btn" routerLink="/atualizar">Atualizar Dados</button>
+    <button class="nav-btn" (click)="confirmarExclusaoConta()">
+      <i class="fas fa-trash"></i> Excluir Conta
+    </button>
+    <button class="nav-btn sair" (click)="sair()">
+      <i class="fas fa-sign-out-alt"></i> Sair
+    </button>
+  </div>
+</nav>
+
+<div class="usuario-info">
+  <p>Bem-vindo(a), <strong>{{usuario.nome}}</strong></p>
+  <p>Email: {{usuario.email}}</p>
+  <p>Total de usuários cadastrados: {{usuarios.length}}</p>
+</div>
+
+<table class="tabela-usuarios">
+  <thead>
+    <tr>
+      <th><i class="fas fa-user"></i> Nome</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuariosPaginados">
+      <td>{{usuario.nome}}</td>
+      <td>{{usuario.email}}</td>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="usuarios.length === 0">
+  <p>⚠️ Nenhum usuário encontrado.</p>
+</div>
+
+<div class="paginacao">
+  <button (click)="paginaAnterior()" [disabled]="paginaAtual === 1">Anterior</button>
+  <span>Página {{paginaAtual}} de {{totalPaginas}}</span>
+  <button (click)="proximaPagina()" [disabled]="paginaAtual === totalPaginas">Próxima</button>
+</div>
+
+<div class="popup" *ngIf="mostrarPopup">
+  <div class="popup-conteudo">
+    <p>Tem certeza que deseja excluir a conta?</p>
+    <button (click)="excluirConta()">Sim</button>
+    <button (click)="mostrarPopup = false">Cancelar</button>
+  </div>
+</div>

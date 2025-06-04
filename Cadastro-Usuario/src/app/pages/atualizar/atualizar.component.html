@@ -1,0 +1,57 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h2 class="form-title">Atualizar Dados</h2>
+
+  <label>Nome:</label>
+  <input formControlName="nome" />
+  <div *ngIf="form.get('nome')?.invalid && form.get('nome')?.touched">
+    <small *ngIf="form.get('nome')?.errors?.['required']">Nome é obrigatório.</small>
+    <small *ngIf="form.get('nome')?.errors?.['minlength']">Mínimo 3 caracteres.</small>
+    <small *ngIf="form.get('nome')?.errors?.['maxlength']">Máximo 50 caracteres.</small>
+  </div>
+
+  <label>Email:</label>
+  <input formControlName="email" />
+  <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+    <small *ngIf="form.get('email')?.errors?.['required']">E-mail é obrigatório.</small>
+    <small *ngIf="form.get('email')?.errors?.['email']">Formato de e-mail inválido.</small>
+  </div>
+
+  <label>Senha:</label>
+  <div class="input-wrapper">
+    <input
+      [type]="mostrarSenha ? 'text' : 'password'"
+      formControlName="senha"
+      class="input-com-icone" />
+    <button type="button" class="icone-botao" (click)="toggleMostrarSenha()">
+      <i class="fas" [ngClass]="mostrarSenha ? 'fa-eye-slash' : 'fa-eye'"></i>
+    </button>
+  </div>
+  <div *ngIf="form.get('senha')?.invalid && form.get('senha')?.touched">
+    <small *ngIf="form.get('senha')?.errors?.['required']">Senha é obrigatória.</small>
+    <small *ngIf="form.get('senha')?.errors?.['minlength']">Mínimo 6 caracteres.</small>
+    <small *ngIf="form.get('senha')?.errors?.['maxlength']">Máximo 20 caracteres.</small>
+  </div>
+
+  <label>Confirmação de Senha:</label>
+  <div class="input-wrapper">
+    <input
+      [type]="mostrarConfirmacaoSenha ? 'text' : 'password'"
+      formControlName="confirmacaoSenha"
+      class="input-com-icone" />
+    <button type="button" class="icone-botao" (click)="toggleMostrarConfirmacaoSenha()">
+      <i class="fas" [ngClass]="mostrarConfirmacaoSenha ? 'fa-eye-slash' : 'fa-eye'"></i>
+    </button>
+  </div>
+  <div *ngIf="form.get('confirmacaoSenha')?.invalid && form.get('confirmacaoSenha')?.touched">
+    <small>Confirmação de senha é obrigatória.</small>
+  </div>
+  <div *ngIf="!senhasConferem() && form.get('confirmacaoSenha')?.touched">
+    <small>As senhas não coincidem.</small>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid || !senhasConferem()">Registrar</button>
+
+  <p class="form-footer">
+    <a routerLink="/home" class="voltar-link">Voltar para o Menu</a>
+  </p>
+</form>
