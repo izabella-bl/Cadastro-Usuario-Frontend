@@ -43,6 +43,7 @@ A aplicação será aberta automaticamente no navegador em http://localhost:4200
 Estrutura do projeto
 
 - Login: Tela para o usuário acessar o sistema.
+  ![Image](https://github.com/user-attachments/assets/4d05436e-1826-4929-a530-e9ac3b1afd8f)
 - Registro: Tela para o usuário criar uma nova conta.
 - Home: Tela principal onde o usuário visualiza seus dados e a lista de usuários.
 - Atualizar Dados: Tela para o usuário atualizar suas informações pessoais.
